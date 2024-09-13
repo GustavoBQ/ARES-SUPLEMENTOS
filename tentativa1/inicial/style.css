@@ -1,0 +1,510 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: rgb(65, 60, 60);
+    color: white; /* Define a cor do texto como branca para o corpo */
+}
+
+/* Menu */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #090909;
+    padding: 50px 50px;
+    color: white; /* Define a cor do texto como branca no cabeçalho */
+}
+
+header h2 {
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-left: 40px;
+    color: aliceblue;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 0, 0);
+    color: aliceblue;
+}
+
+header nav a {
+    color: white; /* Define a cor do texto como branca nos links do menu */
+    text-transform: uppercase;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 5px;
+    text-decoration: none;
+}
+header .navbar-brand {
+    color: white; /* Define a cor do texto do link da marca */
+}
+
+header .navbar-toggler {
+    border-color: white; /* Define a cor da borda do botão de alternância */
+}
+
+
+
+header .offcanvas-body {
+    color: white; /* Define a cor do texto no corpo do offcanvas */
+}
+
+header .nav-link {
+    color: white; /* Define a cor do texto dos links de navegação */
+}
+
+header .nav-link:hover {
+    color: rgb(255, 255, 255); /* Define a cor do texto dos links ao passar o mouse */
+}
+
+header .btn-outline-dark {
+    color: white; /* Define a cor do texto do botão com borda escura */
+    border-color: rgb(0, 0, 0); /* Define a cor da borda do botão com borda escura */
+}
+
+header .btn-outline-dark:hover {
+    background-color: white; /* Define a cor de fundo do botão ao passar o mouse */
+    color: black; /* Define a cor do texto do botão ao passar o mouse */
+}
+
+header .btn-outline-white {
+    color: white; /* Define a cor do texto do botão com borda branca */
+    border-color: white; /* Define a cor da borda do botão com borda branca */
+}
+
+header .btn-outline-white:hover {
+    background-color: white; /* Define a cor de fundo do botão ao passar o mouse */
+    color: black; /* Define a cor do texto do botão ao passar o mouse */
+}
+
+header .form-control {
+    color: black; /* Define a cor do texto dos campos de entrada */
+}
+
+header .form-control::placeholder {
+    color: rgb(0, 0, 0); /* Define a cor do texto do placeholder nos campos de entrada */
+}
+header nav a:hover {
+    background: rgba(0, 0, 0, 0.127);
+}
+
+header form {
+    margin-right: 40px;
+}
+/* Define um fundo escuro para a offcanvas */
+.offcanvas {
+    background-color: #1e1e1e; /* Cor de fundo escura */
+    color: #ffffff; /* Cor do texto em branco */
+}
+
+/* Ajusta o campo de busca para ter um fundo escuro */
+.offcanvas .form-control {
+    background-color: #e2e2e2; /* Fundo escuro para o input */
+    color: #ffffff; /* Cor do texto no input */
+    border: 1px solid #000000; /* Borda levemente mais clara */
+}
+
+/* Altera o placeholder para uma cor mais clara */
+.offcanvas .form-control::placeholder {
+    color: #000000e8;
+}
+
+/* Muda a cor do botão de fechar para um tom mais claro que o fundo */
+.offcanvas .btn-close {
+    filter: invert(1);
+}
+
+/* Muda o ícone do botão de busca */
+.offcanvas .btn-outline-white i {
+    color: #ffffff; /* Cor do ícone de busca */
+}
+
+
+.offcanvas .btn-close:hover {
+    background-color: #555555; /* Fundo ao passar o mouse */
+}
+
+
+.navbar-toggler {
+    border-color: #ffffff; /* Cor da borda do botão de toggle */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.75)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+
+}
+
+
+/* Card */
+.card {
+    background-color: rgb(20, 20, 20);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(126, 0, 0);
+}
+
+.card-title {
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+#active {
+    color: rgb(255, 255, 255);
+}
+
+/* Hero Section */
+.hero {
+    background-image: url(/img/logo.png);
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: left;
+    height: 100px;
+}
+
+.hero h4 {
+    margin-top: 3px;
+    text-transform: uppercase;
+    background-color: rgb(119, 0, 0);
+    color: white; /* Define a cor do texto como branca no herói */
+    padding: 10px;
+}
+
+/* Sections */
+section {
+    background: rgba(0, 0, 0, 0.097);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    background-color: rgb(0, 0, 0);
+}
+
+section h2 {
+    text-transform: uppercase;
+    background-color: rgb(119, 0, 0);
+    color: white; /* Define a cor do texto como branca no título da seção */
+    padding: 10px;
+}
+section h4 {
+    text-transform: uppercase;
+    background-color: rgb(119, 0, 0);
+    padding:0px;
+    background-size:auto;
+}
+section h5 {
+    color: rgb(255, 196, 0);
+  
+}
+
+/* About Section */
+.about {
+    background-image: url(img/logo.png);
+    background-size: 100%;
+    height: 220px;
+    color: white; /* Define a cor do texto como branca na seção sobre */
+    padding: 20px;
+}
+
+.about a {
+    text-transform: uppercase;
+    color: white; /* Define a cor do texto como branca nos links */
+    text-decoration: none;
+}
+
+.about a:hover {
+    text-decoration: line-through;
+    transition: 1s; 
+}
+
+.about p {
+    text-align: left;
+}
+
+#frete {
+    text-align: center;
+}
+
+/* Different Section */
+.different {
+    background-color: rgba(0, 0, 0, 0.097);
+    height: 150px;
+    padding: 20px;
+    text-align: center;
+}
+
+.icon {
+    padding: 20px;
+}
+
+.icon p {
+    margin-top: 5px;
+}
+
+/* Text Section */
+.text-section {
+    margin-top: 5%;
+    background-color: rgba(0, 0, 0, 0.516); 
+    border-radius: 10px;
+    padding: 20px;
+    color: white; /* Define a cor do texto como branca na seção de texto */
+}
+
+/* How Section */
+.how h5 {
+    background: rgba(0,0,0,0.097);
+    text-transform: uppercase;
+    padding: 10px;
+}
+
+.how a {
+    text-decoration: none;
+    color: rgb(255, 191, 0); /* Mantém a cor amarela para os links */
+}
+
+.how a:hover {
+    text-decoration: underline;
+    font-size: 19px;
+}
+
+/* Dev Section */
+.dev .btn {
+    background-color: black;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.dev .btn a {
+    text-decoration: none;
+    color: white; /* Define a cor do texto como branca nos links dos botões */
+    transition: 1s;
+}
+
+.dev .btn:hover {
+    background: white;
+}
+
+.dev .btn a:hover {
+    color: black;
+}
+
+/* Contact Section */
+.contact i {
+    font-size: 28px;
+    padding: 10px;
+}
+
+.contact i:hover {
+    font-size: 30px;
+    transition: all 1s;
+}
+
+/* Footer */
+footer img {
+    width: 90px;
+}
+
+footer h5 {
+    text-transform: uppercase;
+    color: white; /* Define a cor do texto como branca no rodapé */
+}
+
+/* Accordion */
+.accordion-body ul li {
+    border-radius: 10px;
+    padding: 10px;
+    list-style-type: none;
+}
+
+.accordion-body ul li:hover {
+    background-color: rgb(45, 0, 0);
+}
+
+.accordion-body ul li a {
+    color: rgb(255, 213, 0); /* Mantém a cor amarela para os links */
+    text-decoration: none;
+}
+
+.accordion-body ul li a:hover {
+    color: white; /* Altera a cor para branca ao passar o mouse */
+}
+
+/* Animations */
+[data-anime] {
+    opacity: 100;
+    transition: 0.5s;
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime="bottom"] {
+    transform: translate3d(0, 50px, 0);
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+#wpp {
+    animation: animation;
+    animation-duration: 0.5s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+@keyframes animation {
+    from {
+        bottom: 0;
+    }
+    to {
+        bottom: 15px;
+    }
+}
+
+@keyframes animation1 {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+body {
+    animation: animation1;
+    animation-duration: 0.5s;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+}
+
+/* Responsive */
+@media (min-width: 1px) and (max-width: 910px) {
+    .about {
+        font-size: 13px;
+    }
+    .logo-desk {
+        display: none;
+    }
+    .hero {
+        margin-top: 65px;
+    }
+    .hero h5 {
+        padding-top: 5px;
+    }
+    header form {
+        margin: 0;
+    }
+    .desk {
+        display: none;
+    }
+    .pDesk {
+        display: none;
+    }
+    .valorDesk {
+        display: none;
+    }
+}
+
+@media (min-width: 310px) and (max-width: 390px) {
+    .about {
+        background-position-y: 10px;
+        background-repeat: no-repeat;
+        font-size: 10px;
+        height: 200px;
+    }
+}
+
+@media (min-width: 911px) {
+    .logo-mobile {
+        display: none;
+    }
+    .hero {
+        height: 500px;
+        margin-top: 150px;
+    }
+    .about {
+        background-position-y: -120px;
+        height: 400px;
+    }
+    .text-section {
+        font-size: 20px;
+        margin-top: 5%;
+    }
+    .how p {
+        text-align: left;
+    }
+    .mobile {
+        display: none;
+    }
+    .pMobile {
+        display: none;
+    }
+    .description img {
+        width: 70%;
+    }
+    .valorMobile {
+        display: none;
+    }
+    .card {
+        font-size: 20px;
+    }
+}
+
+/* Modal */
+.click {
+    transition: 1s;
+    display: none;
+}
+
+#card-modal {
+    width: 70%;
+    position: fixed;
+    top: 80px;
+    left: 15%;
+    background-color: white;
+    animation: animation2;
+    animation-duration: 1s;
+    animation-delay: 0.3s;
+    animation-fill-mode: both;
+}
+
+.card1 {
+    display: none;
+    color: aliceblue;
+}
+.card-title {
+    color: aliceblue;
+}
+.card-text {
+    color: aliceblue;
+}
+#card-modal ul {
+    list-style: none;
+    text-align: left;
+}
+
+#card-modal ul li a {
+    text-decoration: none;
+    color: rgb(75, 74, 71); 
+}
+
+#card-modal ul li a:hover {
+    text-decoration: underline;
+}

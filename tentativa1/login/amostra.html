@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/inicial/style.css">
+    <script src="https://kit.fontawesome.com/1dfeadbb80.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta name="description" content="Loja de suplementos alimentares. Venha conferir nossos produtos de ótima qualidade e preço justo!">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-L156K8SJXS"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-L156K8SJXS');
+
+        const animation = 'click';
+        const remove = 'card1';
+
+        function find(){
+            document.getElementById('after').classList.add(animation);
+            document.getElementById('card').classList.remove(remove);
+        }    
+
+        function back(){
+            document.getElementById('after').classList.remove(animation);
+            document.getElementById('card').classList.add(remove);
+        }
+
+        function searchProduct() {
+            let input = document.getElementById('searchbar').value.toLowerCase();
+            let x = document.getElementsByClassName('product');
+            for (let i = 0; i < x.length; i++) { 
+                if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                    x[i].style.display = "none";
+                } else {
+                    x[i].style.display = "list-item";                 
+                }
+            }
+        }
+
+        function animeScroll() {
+            const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+            document.querySelectorAll('[data-anime]').forEach(function(element) {
+                if (windowTop > element.offsetTop) {
+                    element.classList.add('animate');
+                } else {
+                    element.classList.remove('animate');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', function() {
+            animeScroll();
+        });
+    </script>
+     <title>Ares Suplementos</title>
+    </head>
+    <body>
+    
+        <div id="card" class="card1">
+            <div class="container text-center">
+                <div class="">
+                    <button onclick="back()" class="btn btn-lg">
+                        <i class="fa-regular fa-circle-xmark"></i>
+                    </button>
+            
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-3">
+                                        <img src="img/logo.png" style="width: 60px; border-radius: 60px;">
+                                    </div>
+                                    <div class="col-9">
+                                        <form class="d-flex navbar-brand mt-2" role="search">
+                                            <input id="searchbar" onkeyup="searchProduct()" name="search" class="form-control" type="search" placeholder="Buscar." aria-label="Search">
+                                            <button class="btn btn-outline-dark" type="submit" disabled>
+                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                            </button>
+                                        </form>
+                                    </div>  
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul id="list">
+                                <li class="product"><a href="/login/login1.html">Whey Protein - 1KG</a></li>
+                                <li class="product"><a href="/login/login1.html">BCAA - 300g</a></li>
+                                <li class="product"><a href="/login/login1.html">Creatina - 500g</a></li>
+                                <li class="product"><a href="/login/login1.html">Vitamina C - 200g</a></li>
+                                <li class="product"><a href="/login/login1.html">Pré-Treino - 400g</a></li>
+                                <li class="product"><a href="/login/login1.html">Glutamina - 300g</a></li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    
+        <div id="after">
+    
+            <header id="menu">
+                <nav class="navbar navbar-expand-lg fixed-top bg-dark">
+                    <div class="container-fluid">
+                        <a id="logo-desk" class="navbar-brand text-center" href="/login/login1.html">
+                            <h2>ARES<br>SUPLEMENTOS</h2>
+                        </a>
+
+                        <div id="logo-mobile" class="d-lg-none">
+                
+                            <form class="d-flex navbar-brand">
+                                <input onclick="find()" id="conteudo" class="form-control me-2" placeholder="Buscar...">
+                                <button class="btn btn-outline-dark" disabled>
+                                    <i class="fa-solid fa-magnifying-glass"></i>
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+        
+                        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                            <div class="offcanvas-header">
+                                <h5 class="offcanvas-title" id="offcanvasNavbarLabel" style="font-family: 'Bebas Neue', sans-serif;"></h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                            </div>
+                            <div class="offcanvas-body text-center">
+                                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                                    <li class="nav-item">
+                                        <a class="nav-link" id="active" aria-current="page" href="/login/login1.html">Início</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="/login/login1.html">Produtos</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#contact">Contato</a>
+                                    </li>
+                                    <li class="nav-item"> 
+                                        <a class="nav-link" href="#about">Sobre nós</a>
+                                </ul>
+
+                                <form class="d-flex" role="search">
+                                    <input onclick="find()" class="form-control me-2" type="search" placeholder="Buscar..." aria-label="Search">
+                                    <button class="btn btn-outline-white" type="submit" disabled>
+                                        <i class="fa-solid fa-magnifying-glass"></i>
+                                    </button>
+                                </form>
+                            </div>
+                        </div>
+        
+                    </div>
+                </nav>
+            </header>
+    
+        
+    
+        <section id="slides" data-anime="top">
+    
+            <div id="mobile" class="container">
+    
+                <div class="d-flex justify-content-center">
+                    <div class="col-8 text-center">
+                        <h4>DESTAQUE</h4>
+                    </div>
+                </div>
+    
+                <div class="d-flex justify-content-center">
+                    <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+    
+                            <div class="carousel-item active">
+                                <div class="card m-2" style="width: 18rem;">
+                                    <div class="container">
+                                        <img src="/img/produtos/creatina1.png" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Creatina - 500g</h3>
+                                            <hr>
+                                            <h5>R$150,00</h5>
+                                            
+                                            <p class="card-text text-white">Frete grátis</p>
+                                            <a href="/login/login1.html" class="btn btn-dark
+
+
+">Comprar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="carousel-item">
+                                <div class="card m-2" style="width: 18rem;">
+                                    <div class="container">
+                                        <img src="img/produtos/bcaa.png" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">BCAA - 300g</h3>
+                                            <hr>
+                                            <h5>R$100,00</h5>
+                                            
+                                            <p class="card-text text-white">Frete grátis</p>
+                                            <a href="/login/login1.html" class="btn btn-dark
+
+
+">Comprar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="carousel-item">
+                                <div class="card m-2" style="width: 18rem;">
+                                    <div class="container">
+                                        <img src="img/produtos/pre_workout1.png" class="card-img-top img-fluid" alt="">
+                                        <div class="card-body">
+                                            <h3 class="card-title text-center">Pré-Treino - 400g</h3>
+                                            <hr>
+                                            <h5>R$130,00</h5>
+                                           
+                                            <p class="card-text text-white">Frete grátis</p>
+                                            <a href="/login/login1.html" class="btn btn-dark
+
+
+">Comprar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Anterior</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Próximo</span>
+                        </button>
+                    </div>
+                </div>
+    
+            </div>
+    
+            <div id="desktop" class="container-fluid">
+    
+                <div class="d-flex justify-content-center">
+                    <div class="col-3 text-center">
+                        <h4> MAIS VISITADOS</h4>
+                    </div>
+                </div>
+    
+                <div class="d-flex justify-content-center">
+                    <div class="row">
+                        <div class="card m-2" style="width: 18rem;">
+                            <div class="container">
+                                <img src="img/produtos/creatine1.png" class="card-img-top img-fluid" alt="">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center">Creatina - 500g</h3>
+                                    <hr>
+                                    <h5>R$150,00</h5>
+                                 
+                                    <p class="card-text text-white">Frete grátis</p>
+                                    <a href="/login/login1.html" class="btn btn-dark
+
+
+">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card m-2" style="width: 18rem;">
+                            <div class="container">
+                                <img src="img/produtos/bcaa1.png" class="card-img-top img-fluid" alt="">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center">BCAA - 300g</h3>
+                                    <hr>
+                                    <h5>R$100,00</h5>
+                                  
+                                    <p class="card-text text-white">Frete grátis</p>
+                                    <a href="/login/login1.html" class="btn btn-dark
+
+
+">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                        <div class="card m-2" style="width: 18rem;">
+                            <div class="container">
+                                <img src="img/produtos/pre_workout.png" class="card-img-top img-fluid" alt="">
+                                <div class="card-body">
+                                    <h3 class="card-title text-center">Pré-Treino - 400g</h3>
+                                    <hr>
+                                    <h5>R$130,00</h5>
+                                   
+                                    <p class="card-text text-white">Frete grátis</p>
+                                    <a href="/login/login1.html" class="btn btn-dark
+
+
+">Comprar</a>
+                                </div>
+                            </div>
+                        </div>
+    
+                    </div>
+                </div>
+    
+            </div>
+    
+        </section>
+    
+        <section id="cards" data-anime="left">
+    
+            <div class="container">
+    
+                <div class="d-flex justify-content-center">
+                    <div class="col-8 text-center">
+                        <h4>MAIS COMPRADOS</h4>
+                    </div>
+                </div>
+    
+                <div class="d-flex justify-content-center">
+    
+                    <div class="card m-2" style="width: 18rem;">
+                        <div class="container">
+                            <img src="img/produtos/glutamine.png" class="card-img-top img-fluid" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Glutamina - 300g</h3>
+                                <hr>
+                                <h5>R$70,00</h5>
+                               
+                                <p class="card-text text-white">Frete grátis</p>
+                                <a href="/login/login1.html" class="btn btn-dark
+
+
+">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card m-2" style="width: 18rem;">
+                        <div class="container">
+                            <img src="img/produtos/vitamin_c.png" class="card-img-top img-fluid" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Vitamina C - 200g</h3>
+                                <hr>
+                                <h5>R$50,00</h5>
+                               
+                                <p class="card-text text-white">Frete grátis</p>
+                                <a href="/login/login1.html" class="btn btn-dark
+
+
+">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="card m-2" style="width: 18rem;">
+                        <div class="container">
+                            <img src="img/produtos/whey1.png" class="card-img-top img-fluid" alt="">
+                            <div class="card-body">
+                                <h3 class="card-title text-center">Whey Protein - 1KG</h3>
+                                <hr>
+                                <h5>R$200,00</h5>
+                              
+                                <p class="card-text text-white">Frete grátis</p>
+                                <a href="/login/login1.html" class="btn btn-dark
+
+
+">Comprar</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </div>
+    
+        </section>
+    
+        <section id="contact" data-anime="right">
+    
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h3>CONTATO</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <h3>Whatsapp</h3>
+                        <p>(21) 9999-9999</p>
+                    </div>
+                  
+                    <div class="col-6 text-center">
+                        <i class="fa-brands fa-instagram"></i>
+                        <h3>Instagram</h3>
+                        <p>@suplementostop</p>
+                    </div>
+                </div>
+            </div>
+    
+        </section>
+
+        <section id="about" data-anime="left">
+            <div class="container">
+                <div class="row">
+                    <div class="col text-center">
+                        <h3>SOBRE NÓS</h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                        <h5 class="text-uppercase">Links Úteis</h5>
+                        <ul class="list-unstyled mb-0">
+                            <li><a href="/login/login1.html" class="text-white">Início</a></li>
+                            <li><a href="/login/login1.html" class="text-white">Produtos</a></li>
+                            <li><a href="#contact" class="text-white">Contato</a></li>
+                            <li><a href="#about" class="text-white">Sobre nós</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-9 col-md-6 text-right">
+                        <p>
+                            Somos uma loja especializada na venda de suplementos alimentares, oferecendo produtos de alta qualidade a preços justos. Nosso objetivo é promover a saúde e o bem-estar de nossos clientes, fornecendo suplementos que atendam às suas necessidades e objetivos.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+      
+        
+        <footer class="text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p>&copy; 2024 Ares Suplementos. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    </body>
+    </html>

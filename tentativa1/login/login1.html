@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="/inicial/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/login/stylelogin1.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>ENTRAR | ARES SUPLEMENTOS</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form action="/inicial/main.html" method="POST">
+                <h1>CRIAR CONTA</h1>
+                <span>Registre-se </span>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <button type="submit" name="register">Criar Conta</button>
+            </form>
+        </div>
+
+        <div class="form-container sign-in">
+            <form action="/inicial/main.html" method="POST">
+                <h1>ENTRAR </h1>
+                <span>Login com email e senha</span>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <input type="password" name="password" placeholder="Senha" required>
+                <button type="submit" name="login">Entrar</button>
+            </form>
+        </div>
+
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>ARES<br>SUPLEMENTOS</h1>
+                    <p>Login com email e senha</p>
+              <button class="hidden" id="login">ENTRAR</button></a>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h1>BEM-VINDO</h1>
+                    <p>ARES SUPLEMENTOS melhorando sua saúde!</p>
+                    <button class="hidden" id="register">INSCREVER-SE</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/login/login1scripts.js"></script>
+</body>
+
+</html>
